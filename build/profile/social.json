@@ -1,0 +1,20 @@
+{
+  "social": [
+    {
+      "network": "linkedin",
+      "href": "https://www.linkedin.com/in/bennydaniel616/"
+    },
+    {
+      "network": "github",
+      "href": "https://github.com/BennyDanielT"
+    },
+    {
+      "network": "medium",
+      "href": "https://medium.com/@TechKnightDanny"
+    },
+    {
+      "network": "email",
+      "href": "mailto:benny.daniel@dal.ca"
+    }
+  ]
+}

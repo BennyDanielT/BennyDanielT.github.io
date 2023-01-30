@@ -1,0 +1,6 @@
+SocialIcon {
+  transform: scale(2, 3);
+}
+SocialIcon:hover {
+  transform: scale(2, 3);
+}
