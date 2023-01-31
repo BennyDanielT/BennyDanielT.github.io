@@ -15,15 +15,10 @@
             "subtitle": "AstraZeneca Pvt. Ltd.",
             "workType": "Full Time",
             "workDescription": [
-"• Performance Metrics Generation: Formulated more than 300 metrics relevant to pharmaceutical data through
-"requirement elicitation with stakeholders and product owners.",
-"• Intelligent Cubes Generation: Constructed in-memory datasets (Intelligent Cubes) in MicroStrategy for dynamic
-"aggregation and support for derived metrics which resulted in an improvement of 40% for the time taken to
-"render data in the dashboards.",
-"• Business Intelligence Development: Engineered dashboards with relevant Key Performance Indicators to assist
-"stakeholders in making informed business decisions and deriving business insights from both historical and realtime data in the order of millions of records.",
-"• Data Engineering: Implemented a new content pipeline consisting of multiple data layers using Spark to provision
-"data relevant to pharmaceutical drugs in Amazon S3 buckets.",
+"• Performance Metrics Generation: Formulated more than 300 metrics relevant to pharmaceutical data through requirement elicitation with stakeholders and product owners.",
+"• Intelligent Cubes Generation: Constructed in-memory datasets (Intelligent Cubes) in MicroStrategy for dynamic aggregation and support for derived metrics which resulted in an improvement of 40% for the time taken to render data in the dashboards.",
+"• Business Intelligence Development: Engineered dashboards with relevant Key Performance Indicators to assist stakeholders in making informed business decisions and deriving business insights from both historical and realtime data in the order of millions of records.",
+"• Data Engineering: Implemented a new content pipeline consisting of multiple data layers using Spark to provision data relevant to pharmaceutical drugs in Amazon S3 buckets.",
 "• Job Orchestration: Automated Data Extraction, Transformation and Load (ETL) jobs with Apache Airflow and eliminated manual data deployment tasks by more than 70%."
             ],
             "dateText": "May 2018 – July 2021"
