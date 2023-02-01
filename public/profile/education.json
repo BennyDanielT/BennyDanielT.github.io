@@ -1,29 +1,38 @@
 {
-    "education":[
-        {
-            "title": "September 2021 - April 2023",
-            "cardTitle": "Master of Applied Computer Science",
-            "cardSubtitle":"Dalhousie University, Halifax",
-            "cardDetailedText": "CGPA - 4.13 / 4.30",
-            "icon" : {
-                "src": "images/education/lorem-ipsum.png"
-            }
-        },
-        {
-            "title": "August 2014 – May 2018",
-            "cardTitle": "Bachelor of Technology - Information Technology",
-            "cardSubtitle":"Sri Venkateswara College of Engineering, Chennai",
-            "cardDetailedText": "CGPA - 7.87 / 10.00"
-        },
-        {
-            "title": "May 2010 - May 2014",
-            "cardTitle": "Senior High",
-            "cardSubtitle":"Maharishi International Residential School, Chennai"
-        },
-        {
-            "title": "January 2009 - March 2010",
-            "cardTitle": "Lower Secondary School",
-            "cardSubtitle":"Clementi Town Secondary School, Singapore"
-        }
-    ]
+  "education": [
+    {
+      "title": "September 2021 - April 2023",
+      "cardTitle": "Master of Applied Computer Science",
+      "cardSubtitle": "Dalhousie University, Halifax",
+      "cardDetailedText": "CGPA - 4.13 / 4.30",
+      "icon": {
+        "src": "images/education/dalhousie.png"
+      }
+    },
+    {
+      "title": "August 2014 – May 2018",
+      "cardTitle": "Bachelor of Technology - Information Technology",
+      "cardSubtitle": "Sri Venkateswara College of Engineering, Chennai",
+      "cardDetailedText": "CGPA - 7.87 / 10.00",
+      "icon": {
+        "src": "images/education/svce.png"
+      }
+    },
+    {
+      "title": "May 2010 - May 2014",
+      "cardTitle": "Senior High",
+      "cardSubtitle": "Maharishi International Residential School, Chennai",
+      "icon": {
+        "src": "images/education/mirs.jfif"
+      }
+    },
+    {
+      "title": "January 2009 - March 2010",
+      "cardTitle": "Lower Secondary School",
+      "cardSubtitle": "Clementi Town Secondary School, Singapore",
+      "icon": {
+        "src": "images/education/cts.jpg"
+      }
+    }
+  ]
 }

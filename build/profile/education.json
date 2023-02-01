@@ -1,19 +1,29 @@
 {
     "education":[
         {
-            "title": "Jun 20XX - Jun 20YY",
-            "cardTitle": "B.Tech, Computer Science",
-            "cardSubtitle":"XYZ University, City",
-            "cardDetailedText": "CGPA - 9.5",
+            "title": "September 2021 - April 2023",
+            "cardTitle": "Master of Applied Computer Science",
+            "cardSubtitle":"Dalhousie University, Halifax",
+            "cardDetailedText": "CGPA - 4.13 / 4.30",
             "icon" : {
                 "src": "images/education/lorem-ipsum.png"
             }
         },
         {
-            "title": "Apr 20XX",
-            "cardTitle": "High School",
-            "cardSubtitle":"ABC School, City",
-            "cardDetailedText": "Marks - 95%"
+            "title": "August 2014 – May 2018",
+            "cardTitle": "Bachelor of Technology - Information Technology",
+            "cardSubtitle":"Sri Venkateswara College of Engineering, Chennai",
+            "cardDetailedText": "CGPA - 7.87 / 10.00"
+        },
+        {
+            "title": "May 2010 - May 2014",
+            "cardTitle": "Senior High",
+            "cardSubtitle":"Maharishi International Residential School, Chennai"
+        },
+        {
+            "title": "January 2009 - March 2010",
+            "cardTitle": "Lower Secondary School",
+            "cardSubtitle":"Clementi Town Secondary School, Singapore"
         }
     ]
 }
