@@ -2,19 +2,23 @@
   "social": [
     {
       "network": "linkedin",
-      "href": "https://www.linkedin.com/in/bennydaniel616/"
+      "href": "https://www.linkedin.com/in/bennydaniel616/",
+      "socialIconBgColor": "#0072B1"
     },
     {
       "network": "github",
-      "href": "https://github.com/BennyDanielT"
+      "href": "https://github.com/BennyDanielT",
+      "socialIconBgColor": "#171515"
     },
     {
       "network": "medium",
-      "href": "https://medium.com/@TechKnightDanny"
+      "href": "https://medium.com/@TechKnightDanny",
+      "socialIconBgColor": "#ffff00"
     },
     {
       "network": "email",
-      "href": "mailto:benny.daniel@dal.ca"
+      "href": "mailto:benny.daniel@dal.ca",
+      "socialIconBgColor": "#f70000"
     }
   ]
 }

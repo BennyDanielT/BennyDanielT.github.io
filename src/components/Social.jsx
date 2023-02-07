@@ -33,7 +33,7 @@ function Social() {
           style={styles.iconStyle}
           url={social.href}
           network={social.network}
-          bgColor={theme.socialIconBgColor}
+          bgColor={social.socialIconBgColor}
           target="_blank"
           rel="noopener"
         />
