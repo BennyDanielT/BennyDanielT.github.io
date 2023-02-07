@@ -1,150 +1,145 @@
 {
-    "projects" : [
+  "projects": [
+    {
+      "image": "images/projects/11332-new-version-app.gif",
+      "title": "Halifax Breweries",
+      "bodyText": "A cross-platform mobile application built for a stock management personnel to facilitate Create, Read, Update and Delete (CRUD) operations. Primary requirement involved features which allowed the personnel to update the facings of relevant brands in each store and derive business insights from the data through charts.",
+      "links": [
         {
-            "image" : "images/projects/portfolio-poster.png",
-            "title": "Dev Portfolio",
-            "bodyText": "- Developer Portfolio Website made in React\n -  Fully customisable and dynamic, easily change data and images.\n - Dark Mode Support",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/dev-portfolio"
-                },
-                {
-                    "text": "Live",
-                    "href": "https://mayankagarwal.me"
-                }
-            ],
-            "tags" : [
-                "React",
-                "Portfolio",
-                "JavaScript"
-            ]
-        },
-        {
-            "image" : "images/projects/caaring-poster.png",
-            "title": "Caaring -  Cab Share App",
-            "bodyText": "- A Cab Sharing web app made using **Django** for **VIT** Students. People can create a new cab or request to join an existing cab.\n - Added User authentication and password reset using **SendGrid**.\n - Deployed on **heroku** using **gunicorn**.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/Caaring"
-                },
-                {
-                    "text": "Live",
-                    "href": "http://caaring.herokuapp.com"
-                }
-            ],
-            "tags" : [
-                "Python",
-                "Django",
-                "BootStrap",
-                "SendGrid",
-                "Heroku",
-                "Gunicorn",
-                "VIT"
-            ]
-        },
-        {
-            "image" : "images/projects/quiet-hours-poster.jpg",
-            "title": "Quiet Hours App",
-            "bodyText": "- An Android App that **automatically silences** your phone during class hours, designed for **VITians**.\n - Option to select class **slots** and **custom time**.\n - Option to put on Vibrate instead of Silent.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/QuietHours-Android"
-                }
-            ],
-            "tags" : [
-                "Java",
-                "Android",
-                "Alarm Manager",
-                "VIT"
-            ]
-        },
-        {
-            "title": "Secure Chat App",
-            "bodyText": "- An Android App that allows users to send texts in real time.\n - End to End encryption using **RSA** Algorithm.\n - Uses **Firebase** database to store texts.\n - Secured with **Fingerprint** lock.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/SecureChatApp"
-                }
-            ],
-            "tags" : [
-                "Java",
-                "Android",
-                "Firebase",
-                "RSA"
-            ]
-        },
-        {
-            "title": "MVVM Sample App",
-            "bodyText": "- An Android App that loads data from mock API and show in both **LinearLayout** and **GridLayout RecyclerView**.\n - Offline support using **Room** DB and **NetworkBoundResource**.\n - Uses the **MVVM** architecture.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/mvvm-sample-app"
-                }
-            ],
-            "tags" : [
-                "Kotlin",
-                "Android",
-                "MVVM",
-                "Room",
-                "Coroutines",
-                "Flow",
-                "Hilt-Dagger",
-                "NetworkBoundResource"
-            ]
-        },
-        {
-            "title": "Feed List App",
-            "bodyText": "- An Android App that loads list of feeds from a **paginated** API and shows in a RecyclerView.\n - Uses the **MVVM** architecture.\n - Uses **Paging 3** library along with other Architecture Components.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
-                }
-            ],
-            "tags" : [
-                "Kotlin",
-                "Android",
-                "MVVM",
-                "Paging 3",
-                "Coroutines",
-                "Flow"
-            ]
-        },
-        {
-            "title": "Task Tracker",
-            "bodyText": "- A simple Task Tracker web app made with **Angular 12**.\n - Uses **mock JSON server** to get, add, delete or update tasks.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/task-tracker-app"
-                }
-            ],
-            "tags" : [
-                "TypeScript",
-                "Angular 12",
-                "JavaScript"
-            ]
-        },
-        {
-            "title": "Image Encryption/Decryption",
-            "bodyText": "- A Web App for Image Encryption and Decryption made in **Django**.\n - Uses **SDES** algorithm for encryption/decryption.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/img-encrypt-sdes"
-                }
-            ],
-            "tags" : [
-                "Python",
-                "Django",
-                "SDES",
-                "Cryptography"
-            ]
+          "text": "GitHub",
+          "href": "https://github.com/BennyDanielT/HalifaxBrewery"
         }
-    ]
+      ],
+      "tags": ["React Native", "NodeJs", "ExpressJS", "MongoDB"]
+    },
+    {
+      "image": "images/projects/17450-health-tourism-and-hotel-reservation-animation.gif",
+      "title": "Serverless Bed and Breakfast",
+      "bodyText": "A multi-cloud serverless application with room reservation, order management, chatbot, tour reservation and analytics features. Built with Amazon Web Services (Lambda, Lex, DynamoDB and Cognito) & Google Cloud Platform (Cloud Function, Publish/Subscribe, Firestore and Data Studio).",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/BennyDanielT/Serverless-BnB"
+        }
+      ],
+      "tags": ["ReactJS", "NodeJs", "AWS", "GCP"]
+    },
+    {
+      "image": "images/projects/112425-ai-cpu-circuit-board-loading-animation.gif",
+      "title": "Tornado Prediction",
+      "bodyText": "The purpose of this project is to predict the occurrence of tornadoes and its attributes such as magnitude, length and estimated property loss, within a geographical location based on historical data. Linear Regressors, XGBoost and Random Forest Models were trained and evaluated on the data to determine the most optimal model for forecasting Tornado occurrences.",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/BennyDanielT/Tornado-Prediction"
+        }
+      ],
+      "tags": ["Python", "Pandas", "Scikit-Learn", "Ensemble Models"]
+    },
+    {
+      "image": "images/projects/9482-select-your-trip.gif",
+      "title": "Trippy",
+      "bodyText": "A web application built using Spring Boot, HTML5 and CSS3 for Ride sharing, Vehicle Management and Ride Bookings for two User Personas, namely, Vehicle Owner and Customers. Primary emphasis on Git Continuous integration and Development (CI/CD), Test Driven Development and elimination of Code Smells.",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/BennyDanielT/Trip-Management"
+        }
+      ],
+      "tags": ["Spring Boot", "HTML5", "CSS3", "DesigniteJava", "QScored"]
+    },
+    {
+      "image": "images/projects/96938-word-puzzle.gif",
+      "title": "Boggle Puzzle Solver",
+      "bodyText": "The program functions as follows. Users can input a set of words and a puzzle grid. The set contains words that might appear in the grid. The program traverses through the puzzle and generates a sorted list of words which can be located in the grid along with the path traversed to obtain the word.",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/BennyDanielT/Boggle-Puzzle-Solver"
+        }
+      ],
+      "tags": [
+        "Java",
+        "Object Oriented Programming",
+        "Data Structures & Algorithms"
+      ]
+    },
+    {
+      "image": "images/projects/121140-trip.gif",
+      "title": "Travel Assistant",
+      "bodyText": "The program functions as follows. Users can make use of commands to add a City, add a Flight path between two cities and add a Train path between two cities. Subsequently they can plan a trip between two cities, utilizing the information that was previously entered. The relative cost of travel is used to determine the shortest path from Source to Destination.",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/BennyDanielT/Travel-Assistant"
+        }
+      ],
+      "tags": [
+        "Java",
+        "Object Oriented Programming",
+        "Data Structures",
+        "Dijkstra’s algorithm"
+      ]
+    },
+    {
+      "image": "images/projects/53942-cactus-family.gif",
+      "title": "Genealogy-Relationship",
+      "bodyText": "A JAVA, console based application to determine the Biological relationship between individuals in terms of Degree of Cousinship and Level of Removal.",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/BennyDanielT/Genealogy-Relationship"
+        }
+      ],
+      "tags": [
+        "Java",
+        "Object Oriented Programming",
+        "Data Structures & Algorithms"
+      ]
+    },
+    {
+      "image": "images/projects/135056-monthly-expenses.gif",
+      "title": "Expense Tracker",
+      "bodyText": "- A Web application for tracking individual and group expenses with intuitive features such as Categorization of Expenses, Reminders, Notifications, In-App Payment Integration & Expense Analytics",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/BennyDanielT/Expense-Tracker"
+        }
+      ],
+      "tags": [
+        "ReactJS",
+        "NodeJs",
+        "ExpressJS",
+        "SQL",
+        "Supabase",
+        "Redux",
+        "AWS Elastic Beanstalk"
+      ]
+    },
+    {
+      "image": "images/projects/45958-server-instalation.gif",
+      "title": "Distributed Database Application",
+      "bodyText": "A distributed database management system that operates in 2 Linux virtual instances in the Google Cloud Platform, built with Java. Built-in, Metadata storage, SQL Query Parser, Log Management and User Management. ",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/BennyDanielT/Distributed-Database-Management-Systsem"
+        }
+      ],
+      "tags": ["Java", "SQL", "Google Cloud Platform", "Distributed Systems"]
+    },
+    {
+      "image": "images/projects/92883-vishnu-marketing-automation.gif",
+      "title": "Automation Proof of Concepts (POCs)",
+      "bodyText": "Proof-of-Concepts for Use cases relevant to Automation",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/BennyDanielT/Automation"
+        }
+      ],
+      "tags": ["Python", "PyAutoGUI", "Automation"]
+    }
+  ]
 }
