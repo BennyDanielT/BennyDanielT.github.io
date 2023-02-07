@@ -62,7 +62,7 @@ const NavBar = () => {
     >
       <Container>
         {data?.logo && (
-          <Navbar.Brand href='/'>
+          <Navbar.Brand href='https://github.com/BennyDanielT'>
             <img
               src={data?.logo?.source}
               className='brand-logo'
