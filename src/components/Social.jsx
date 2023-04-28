@@ -6,9 +6,9 @@ import '../css/icon.css';
 
 const styles = {
   iconStyle: {
-    marginLeft: 10,
-    marginRight: 10,
-    marginBottom: 10,
+    marginLeft: 15,
+    marginRight: 15,
+    marginBottom: 40,
   },
 };
 
@@ -26,18 +26,20 @@ function Social() {
   }, []);
 
   return (
-    <div className="social">
-      {data ? data.social.map((social) => (
-        <SocialIcon
-          key={social.network}
-          style={styles.iconStyle}
-          url={social.href}
-          network={social.network}
-          bgColor={social.socialIconBgColor}
-          target="_blank"
-          rel="noopener"
-        />
-      )) : null}
+    <div className='social'>
+      {data
+        ? data.social.map((social) => (
+            <SocialIcon
+              key={social.network}
+              style={styles.iconStyle}
+              url={social.href}
+              network={social.network}
+              bgColor={social.socialIconBgColor}
+              target='_blank'
+              rel='noopener'
+            />
+          ))
+        : null}
     </div>
   );
 }

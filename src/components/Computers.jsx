@@ -5,10 +5,10 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from './Loader';
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF('./cube/scene.gltf');
-  const [rotation, setRotation] = useState([0, 0, 0]);
+  const computer = useGLTF('./cube_bright/scene.gltf');
+  const [rotation, setRotation] = useState([90, 0, 90]);
   useEffect(() => {
-    const rotationSpeed = 0.016;
+    const rotationSpeed = 0.017;
 
     const interval = setInterval(() => {
       setRotation([rotation[0], rotation[1] + rotationSpeed, rotation[2]]);
@@ -20,17 +20,17 @@ const Computers = ({ isMobile }) => {
     <mesh>
       <hemisphereLight intensity={0.5} groundColor='black' />
       <spotLight
-        position={[20, -40, -50]}
-        angle={0.12}
+        position={[0, 35, 0]}
+        angle={0.18}
         penumbra={1}
-        intensity={2}
+        intensity={9}
         castShadow
-        shadow-mapSize={1024}
+        shadow-mapSize={4096}
       />
       <pointLight intensity={5} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.035 : 0.5}
+        scale={isMobile ? 0.036 : 0.5}
         position={isMobile ? [0, 0, 0] : [0, -3.25, -1.5]}
         rotation={rotation}
         onPointerDown={(e) => {
@@ -78,25 +78,24 @@ const ComputersCanvas = () => {
   // }, []);
 
   return (
-      <Canvas
-        frameloop='demand'
-        shadows
-        dpr={[1.5, 2]}
-        camera={{ position: [10, 0, -10], fov: 60 }}
-        gl={{ preserveDrawingBuffer: true }}
-      >
-        <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls
-            enableZoom={false}
-            maxPolarAngle={Math.PI / 2}
-            minPolarAngle={Math.PI / 2}
-          />
-          <Computers isMobile={true} />
-        </Suspense>
+    <Canvas
+      frameloop='demand'
+      shadows
+      dpr={[1.5, 2]}
+      camera={{ position: [10, 0, -10], fov: 60 }}
+      gl={{ preserveDrawingBuffer: true }}
+    >
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
+        <Computers isMobile={true} />
+      </Suspense>
 
-        <Preload all />
-      </Canvas>
-      
+      <Preload all />
+    </Canvas>
   );
 };
 
