@@ -130,6 +130,18 @@
       "tags": ["Java", "SQL", "Google Cloud Platform", "Distributed Systems"]
     },
     {
+      "image": "images/projects/11332-new-version-app.gif",
+      "title": "Dalplace - Mobile Application",
+      "bodyText": "A Marketplace application for the Dalhousie Community to purchase and sell products.",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/BennyDanielT/Dalplace"
+        }
+      ],
+      "tags": ["Kotlin", "Android Studio", "XML"]
+    },
+    {
       "image": "images/projects/92883-vishnu-marketing-automation.gif",
       "title": "Automation Proof of Concepts (POCs)",
       "bodyText": "Proof-of-Concepts for Use cases relevant to Automation",
