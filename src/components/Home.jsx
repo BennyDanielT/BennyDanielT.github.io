@@ -4,6 +4,7 @@ import Fade from 'react-reveal';
 import endpoints from '../constants/endpoints';
 import Social from './Social';
 import FallbackSpinner from './FallbackSpinner';
+import ComputersCanvas  from './Computers';
 
 const styles = {
   nameStyle: {
@@ -40,7 +41,6 @@ function Home() {
         <h1 style={styles.nameStyle}>{data?.name}</h1>
         <div style={{ flexDirection: 'row', paddingBottom: '1.5%' }}>
           <h2 style={styles.inlineChild}> </h2>
-          {/* I&apos;m&nbsp; */}
           <Typewriter
             options={{
               loop: true,
@@ -49,6 +49,7 @@ function Home() {
             }}
           />
         </div>
+        <ComputersCanvas />
         <Social />
       </div>
     </Fade>
