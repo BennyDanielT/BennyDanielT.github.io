@@ -60,12 +60,12 @@ const NavBar = () => {
         style={
           data?.logo?.height && data?.logo?.width
             ? {
-                height: 100,
-                width: 125,
+                height: 160,
+                width: 200,
                 borderRadius: data?.logo?.borderRadius,
                 position: 'absolute',
-                left: '5%',
-                top: '0%',
+                left: '2%',
+                top: '-1%',
               }
             : styles.logoStyle
         }

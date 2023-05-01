@@ -5,16 +5,20 @@ import endpoints from '../constants/endpoints';
 import Social from './Social';
 import FallbackSpinner from './FallbackSpinner';
 import ComputersCanvas from './Computers';
-import ParticlesComponent from './Particle';
-
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
 
 const styles = {
   nameStyle: {
-    fontSize: '5em',
-    paddingBottom: '5%',
+    fontSize: '4.5em',
+    paddingBottom: '2.5%',
+    color: '#59cbe8',
   },
   inlineChild: {
     display: 'inline-block',
+    paddingBottom: '5.5%',
+
+    color: '#fff ',
   },
   mainContainer: {
     height: '100%',
@@ -22,6 +26,10 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundImage:
+      'url(/images/home/tech_night_danny2.png), url(/images/home/tech_night_danny2.png)',
+    backgroundRepeat: 'repeat-y',
+    backgroundPosition: 'left top, right top',
   },
 };
 
@@ -40,10 +48,8 @@ function Home() {
   return data ? (
     <Fade>
       <div style={styles.mainContainer}>
-        {/* <ParticlesComponent /> */}
-
         <h1 style={styles.nameStyle}>{data?.name}</h1>
-        <div style={{ flexDirection: 'row', paddingBottom: '4%' }}>
+        <div style={styles.inlineChild}>
           <h2 style={styles.inlineChild}> </h2>
           <Typewriter
             options={{
