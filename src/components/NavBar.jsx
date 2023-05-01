@@ -53,23 +53,25 @@ const NavBar = () => {
 
   return (
     <div>
-      <img
-        src={data?.logo?.source}
-        className='brand-logo'
-        alt='main logo'
-        style={
-          data?.logo?.height && data?.logo?.width
-            ? {
-                height: 160,
-                width: 200,
-                borderRadius: data?.logo?.borderRadius,
-                position: 'absolute',
-                left: '2%',
-                top: '-1%',
-              }
-            : styles.logoStyle
-        }
-      />
+      <a href='https://www.github.com/BennyDanielT'>
+        <img
+          src={data?.logo?.source}
+          className='brand-logo'
+          alt='main logo'
+          style={
+            data?.logo?.height && data?.logo?.width
+              ? {
+                  height: 160,
+                  width: 200,
+                  borderRadius: data?.logo?.borderRadius,
+                  position: 'absolute',
+                  left: '2%',
+                  top: '-1%',
+                }
+              : styles.logoStyle
+          }
+        />
+      </a>
 
       <Navbar
         fixed='top'

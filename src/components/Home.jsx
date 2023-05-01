@@ -26,10 +26,25 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundImage:
-      'url(/images/home/tech_night_danny2.png), url(/images/home/tech_night_danny2.png)',
+
     backgroundRepeat: 'repeat-y',
     backgroundPosition: 'left top, right top',
+  },
+  guardImage: {
+    borderRadius: '50%',
+    width: '15%',
+    position: 'absolute',
+    left: ' %',
+    top: '30%',
+    margin: '0 20px 0 0',
+  },
+  guardImage2: {
+    borderRadius: '50%',
+    width: '15%',
+    position: 'absolute',
+    right: '15%',
+    top: '30%',
+    margin: '0 20px 0 0',
   },
 };
 
@@ -48,6 +63,16 @@ function Home() {
   return data ? (
     <Fade>
       <div style={styles.mainContainer}>
+        {/* <img
+          src='/images/home/tech_knight_danny2.png'
+          alt='profile'
+          style={styles.guardImage}
+        />
+        <img
+          src='/images/home/tech_knight_danny2.png'
+          alt='profile'
+          style={styles.guardImage2}
+        /> */}
         <h1 style={styles.nameStyle}>{data?.name}</h1>
         <div style={styles.inlineChild}>
           <h2 style={styles.inlineChild}> </h2>
