@@ -7,8 +7,11 @@ import FallbackSpinner from './FallbackSpinner';
 import ComputersCanvas from './Computers';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
-const audio = new Audio('/music/lofi.mp3');
-audio.play();
+
+function playAudio() {
+  const audio = new Audio('/music/lofi.mp3');
+  audio.play();
+}
 
 const styles = {
   nameStyle: {
@@ -32,28 +35,24 @@ const styles = {
     backgroundRepeat: 'repeat-y',
     backgroundPosition: 'left top, right top',
   },
-  guardImage: {
-    borderRadius: '50%',
-    width: '15%',
-    position: 'absolute',
-    left: ' %',
-    top: '30%',
-    margin: '0 20px 0 0',
-  },
-  guardImage2: {
-    borderRadius: '50%',
-    width: '15%',
-    position: 'absolute',
-    right: '15%',
-    top: '30%',
-    margin: '0 20px 0 0',
-  },
 };
 
 function Home() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
+    async function requestAudioPermission() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          audio: true,
+        });
+        console.log('Audio permission granted:', stream);
+        playAudio();
+      } catch (error) {
+        console.log('Audio permission denied:', error);
+      }
+    }
+    requestAudioPermission();
     fetch(endpoints.home, {
       method: 'GET',
     })
