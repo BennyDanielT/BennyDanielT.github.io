@@ -7,6 +7,8 @@ import FallbackSpinner from './FallbackSpinner';
 import ComputersCanvas from './Computers';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
+const audio = new Audio('/music/lofi.mp3');
+audio.play();
 
 const styles = {
   nameStyle: {
@@ -62,6 +64,7 @@ function Home() {
 
   return data ? (
     <Fade>
+      {/* <audio src='/music/lofi.mp3' autoplay loop></audio> */}
       <div style={styles.mainContainer}>
         {/* <img
           src='/images/home/tech_knight_danny2.png'

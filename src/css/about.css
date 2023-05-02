@@ -2,3 +2,20 @@ img {
   height: 500px;
   width: 500px;
 }
+
+.rotate-image {
+  animation: slide-in 2s linear;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slide-in 1s ease-out;
+}

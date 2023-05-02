@@ -18,7 +18,7 @@ const styles = {
     fontWeight: 500,
   },
   introImageContainer: {
-    marginTop: '-100px', // adjust this value to your liking
+    marginTop: '-12y0px', // adjust this value to your liking
     margin: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -54,6 +54,7 @@ function About(props) {
                 </Col>
                 <Col style={styles.introImageContainer}>
                   <img
+                    className='rotate-image'
                     src={data?.imageSource}
                     alt='profile'
                     style={{ borderRadius: '50%' }}
