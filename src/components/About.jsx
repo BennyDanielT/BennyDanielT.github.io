@@ -18,7 +18,7 @@ const styles = {
     fontWeight: 500,
   },
   introImageContainer: {
-    marginTop: '-12y0px', // adjust this value to your liking
+    marginTop: '-120px', // adjust this value to your liking
     margin: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -43,7 +43,7 @@ function About(props) {
 
   return (
     <>
-      <Header title={header} />
+      <Header title='Who am I ?' />
       <div className='section-content-container'>
         <Container>
           {data ? (
@@ -54,10 +54,11 @@ function About(props) {
                 </Col>
                 <Col style={styles.introImageContainer}>
                   <img
+                    id='about'
                     className='rotate-image'
-                    src={data?.imageSource}
+                    src='/images/about/Danny.jpg'
                     alt='profile'
-                    style={{ borderRadius: '50%' }}
+                    style={{ borderRadius: '40%', marginTop: '-120px' }}
                   />
                 </Col>
               </Row>

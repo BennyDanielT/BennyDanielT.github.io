@@ -6,12 +6,12 @@ function Splash() {
   const [isTextAnimated, setIsTextAnimated] = React.useState(false);
   const backgroundStyles = {
     display: 'flex',
+    backgroundImage: 'url("images/home/star.jpg")',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     height: '100vh',
-    backgroundColor: '#000',
-    backgroundImage: 'url("images/home/star.jpg")',
+    // backgroundColor: '#000',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     // width: '100vw',

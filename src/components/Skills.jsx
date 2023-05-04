@@ -10,7 +10,7 @@ import FallbackSpinner from './FallbackSpinner';
 const styles = {
   iconStyle: {
     height: 75,
-    width: 75,
+    width: 80,
     margin: 10,
     marginBottom: 0,
   },
@@ -19,9 +19,79 @@ const styles = {
   },
 };
 
+const skills_data = {
+  intro:
+    'I love to learn new things and experiment with new technologies.\nThese are some of the major languages, technologies, tools and platforms I have worked with, check out my Github page for more:',
+  skills: [
+    {
+      title: 'Languages & Databases',
+      items: [
+        {
+          icon: 'images/skills/java.png',
+          title: 'Java',
+        },
+        {
+          icon: 'images/skills/js.png',
+          title: 'JavaScript',
+        },
+        {
+          icon: 'images/skills/python.png',
+          title: 'Python',
+        },
+        {
+          icon: 'images/skills/nosql.png',
+          title: 'NoSQL',
+        },
+        {
+          icon: 'images/skills/mysql.png',
+          title: 'MySQL',
+        },
+      ],
+    },
+    {
+      title: 'Frameworks & Technologies',
+      items: [
+        {
+          icon: 'images/skills/android_new.png',
+          title: 'Android',
+        },
+        {
+          icon: 'images/skills/react.png',
+          title: 'React',
+        },
+        {
+          icon: 'images/skills/nodejs.png',
+          title: 'Nodejs',
+        },
+        {
+          icon: 'images/skills/terraform.png',
+          title: 'Terraform',
+        },
+      ],
+    },
+    {
+      title: 'Tools & Platforms',
+      items: [
+        {
+          icon: 'images/skills/android-studio.png',
+          title: 'Android Studio',
+        },
+        {
+          icon: 'images/skills/git.png',
+          title: 'Git',
+        },
+        {
+          icon: 'images/skills/docker.png',
+          title: 'Docker',
+        },
+      ],
+    },
+  ],
+};
+
 function Skills(props) {
   const { header } = props;
-  const [data, setData] = useState(null);
+  // const [jsondata, setData] = useState(null);
 
   const renderSkillsIntro = (intro) => (
     <h4 style={styles.introTextContainer}>
@@ -34,19 +104,19 @@ function Skills(props) {
       method: 'GET',
     })
       .then((res) => res.json())
-      .then((res) => setData(res))
+      // .then((res) => setData(res))
       .catch((err) => err);
   }, []);
 
   return (
     <>
       <Header title={header} />
-      {data ? (
+      {skills_data ? (
         <Fade>
-          <div className="section-content-container">
+          <div className='section-content-container'>
             <Container>
-              {renderSkillsIntro(data.intro)}
-              {data.skills?.map((rows) => (
+              {renderSkillsIntro(skills_data.intro)}
+              {skills_data.skills?.map((rows) => (
                 <div key={rows.title}>
                   <br />
                   <h3>{rows.title}</h3>
@@ -65,7 +135,9 @@ function Skills(props) {
             </Container>
           </div>
         </Fade>
-      ) : <FallbackSpinner /> }
+      ) : (
+        <FallbackSpinner />
+      )}
     </>
   );
 }

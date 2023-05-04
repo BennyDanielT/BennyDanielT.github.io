@@ -15,9 +15,10 @@ function playAudio() {
 
 const styles = {
   nameStyle: {
-    fontSize: '4.5em',
+    fontSize: '4.25em',
     paddingBottom: '2.5%',
     color: '#59cbe8',
+    width: '100%',
   },
   inlineChild: {
     display: 'inline-block',
@@ -35,11 +36,29 @@ const styles = {
     backgroundRepeat: 'repeat-y',
     backgroundPosition: 'left top, right top',
   },
+
+  imageContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    paddingRight: '5%',
+    position: 'absolute',
+    // top: '50%',
+    right: '0',
+    transform: 'translateY(-50%)',
+  },
+  badge: {
+    width: '120px',
+    height: '120px',
+    margin: '70px 2px 0px 20px',
+  },
 };
 
 function Home() {
   const [data, setData] = useState(null);
-
+  const [isImageLoaded, setIsImageLoaded] = React.useState(false);
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
   useEffect(() => {
     async function requestAudioPermission() {
       try {
@@ -63,19 +82,34 @@ function Home() {
 
   return data ? (
     <Fade>
-      {/* <audio src='/music/lofi.mp3' autoplay loop></audio> */}
       <div style={styles.mainContainer}>
-        {/* <img
-          src='/images/home/tech_knight_danny2.png'
-          alt='profile'
-          style={styles.guardImage}
-        />
-        <img
-          src='/images/home/tech_knight_danny2.png'
-          alt='profile'
-          style={styles.guardImage2}
-        /> */}
-        <h1 style={styles.nameStyle}>{data?.name}</h1>
+        <h1 style={{ ...styles.nameStyle }}>{data.name}</h1>
+
+        <style>{`
+        @keyframes pulse {
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.5);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+
+        @keyframes slide-in {
+          from {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0%);
+            opacity: 1;
+          }
+        }
+      `}</style>
+
         <div style={styles.inlineChild}>
           <h2 style={styles.inlineChild}> </h2>
           <Typewriter
@@ -89,6 +123,32 @@ function Home() {
         <ComputersCanvas />
 
         <Social />
+      </div>
+      <div style={styles.imageContainer}>
+        <img
+          src='/images/home/aws-certified-cloud-practitioner.png'
+          style={{
+            ...styles.badge,
+            animation: `${isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''}`,
+          }}
+          onLoad={handleImageLoad}
+        />
+        <img
+          src='/images/home/aws-certified-solutions-architect-associate.png'
+          style={{
+            ...styles.badge,
+            animation: `${isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''}`,
+          }}
+          onLoad={handleImageLoad}
+        />
+        <img
+          src='/images/home/hashicorp-certified-terraform-associate-002.png'
+          style={{
+            ...styles.badge,
+            animation: `${isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''}`,
+          }}
+          onLoad={handleImageLoad}
+        />
       </div>
     </Fade>
   ) : (
