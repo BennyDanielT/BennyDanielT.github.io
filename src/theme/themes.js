@@ -25,6 +25,7 @@ export const darkTheme = {
   background: '#050816',
   color: '#ffffff',
   accentColor: '#0d65e9',
+  education_card: '#ffffff',
   chronoTheme: {
     cardBgColor: '#1B1B1B',
     cardForeColor: '#eee',
