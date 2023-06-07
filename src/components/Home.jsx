@@ -90,12 +90,13 @@ function Home() {
 
   return (
     <Fade>
-      <div style={styles.mainContainer}>
-        {data ? (
-          <>
-            <h1 style={{ ...styles.nameStyle }}>{data.name}</h1>
+      <div className='section-content-container'>
+        <div style={styles.mainContainer}>
+          {data ? (
+            <>
+              <h1 style={{ ...styles.nameStyle }}>{data.name}</h1>
 
-            <style>{`
+              <style>{`
               @keyframes pulse {
                 0% {
                   transform: scale(1);
@@ -120,58 +121,59 @@ function Home() {
               }
             `}</style>
 
-            <div style={styles.inlineChild}>
-              <h2 style={styles.inlineChild}> </h2>
-              <Typewriter
-                options={{
-                  loop: true,
-                  autoStart: true,
-                  strings: data?.roles,
-                }}
-              />
-            </div>
-            <ComputersCanvas />
+              <div style={styles.inlineChild}>
+                <h2 style={styles.inlineChild}> </h2>
+                <Typewriter
+                  options={{
+                    loop: true,
+                    autoStart: true,
+                    strings: data?.roles,
+                  }}
+                />
+              </div>
+              <ComputersCanvas />
 
-            <Social />
-          </>
-        ) : (
-          <FallbackSpinner />
-        )}
+              <Social />
+            </>
+          ) : (
+            <FallbackSpinner />
+          )}
 
-        <div style={styles.imageContainer}>
-          <img
-            src='/images/home/aws-certified-cloud-practitioner.png'
-            style={{
-              ...styles.badge,
-              animation: `${
-                isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
-              }`,
-            }}
-            onLoad={handleImageLoad}
-            alt='AWS Certified Cloud Practitioner'
-          />
-          <img
-            src='/images/home/aws-certified-solutions-architect-associate.png'
-            style={{
-              ...styles.badge,
-              animation: `${
-                isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
-              }`,
-            }}
-            onLoad={handleImageLoad}
-            alt='AWS Certified Solutions Architect Associate'
-          />
-          <img
-            src='/images/home/hashicorp-certified-terraform-associate-002.png'
-            style={{
-              ...styles.badge,
-              animation: `${
-                isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
-              }`,
-            }}
-            onLoad={handleImageLoad}
-            alt='HashiCorp Certified Terraform Associate'
-          />
+          <div style={styles.imageContainer}>
+            <img
+              src='/images/home/aws-certified-cloud-practitioner.png'
+              style={{
+                ...styles.badge,
+                animation: `${
+                  isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
+                }`,
+              }}
+              onLoad={handleImageLoad}
+              alt='AWS Certified Cloud Practitioner'
+            />
+            <img
+              src='/images/home/aws-certified-solutions-architect-associate.png'
+              style={{
+                ...styles.badge,
+                animation: `${
+                  isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
+                }`,
+              }}
+              onLoad={handleImageLoad}
+              alt='AWS Certified Solutions Architect Associate'
+            />
+            <img
+              src='/images/home/hashicorp-certified-terraform-associate-002.png'
+              style={{
+                ...styles.badge,
+                animation: `${
+                  isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
+                }`,
+              }}
+              onLoad={handleImageLoad}
+              alt='HashiCorp Certified Terraform Associate'
+            />
+          </div>
         </div>
       </div>
     </Fade>

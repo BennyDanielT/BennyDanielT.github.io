@@ -1,9 +1,9 @@
 {
   "logo": {
-    "source": "images/home/logo_png.png",
-    "width": "85px",
+    "source": "images/home/tech_knight_danny.png",
+    "width": "45px",
     "borderRadius": "80%",
-    "height": "80px"
+    "height": "40px"
   },
   "sections": [
     {
