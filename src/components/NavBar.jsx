@@ -54,23 +54,23 @@ const NavBar = () => {
   return (
     <div>
       <a href='https://www.github.com/BennyDanielT'>
-        <img
-          src={data?.logo?.source}
-          className='brand-logo'
-          alt='main logo'
-          style={
-            data?.logo?.height && data?.logo?.width
-              ? {
-                  height: 160,
-                  width: 200,
-                  borderRadius: data?.logo?.borderRadius,
-                  position: 'absolute',
-                  left: '2%',
-                  top: '-1%',
-                }
-              : styles.logoStyle
-          }
-        />
+        <div style={{position: 'absolute', top: '-1%', left: '1%'}}>
+          <img
+            src={data?.logo?.source}
+            // className='brand-logo'
+            alt='main logo'
+            style={
+              data?.logo?.height && data?.logo?.width
+                ? {
+                    height: 120,
+                    width: 150,
+                    borderRadius: data?.logo?.borderRadius,
+                    
+                  }
+                : styles.logoStyle
+            }
+          />
+        </div>
       </a>
 
       <Navbar
@@ -80,7 +80,7 @@ const NavBar = () => {
         variant='light'
         className='navbar-custom'
         expanded={expanded}
-        style={{ right: '-12%', top: '2%' }}
+        style={{ position: 'right', right: '-12%', top: '2%' }}
       >
         <Container>
           {data?.logo && (

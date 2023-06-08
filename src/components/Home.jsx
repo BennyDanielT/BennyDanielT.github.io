@@ -16,19 +16,21 @@ function playAudio() {
 const styles = {
   nameStyle: {
     position: 'relative',
-    top: '1%',
+    top: '5%',
     fontSize: '4.25em',
     paddingBottom: '2.5%',
     color: '#59cbe8',
-    width: '100%',
+    // width: '100%',
   },
   inlineChild: {
     display: 'inline-block',
     paddingBottom: '5.5%',
     color: '#fff ',
+    position: 'relative',
+    top: '5%',
   },
   mainContainer: {
-    minHeight: '100vh',
+    // minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',

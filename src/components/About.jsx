@@ -23,6 +23,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     display: 'flex',
+    position: 'relative',
   },
 };
 
