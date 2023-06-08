@@ -15,6 +15,8 @@ function playAudio() {
 
 const styles = {
   nameStyle: {
+    position: 'relative',
+    top: '1%',
     fontSize: '4.25em',
     paddingBottom: '2.5%',
     color: '#59cbe8',
@@ -38,9 +40,9 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     paddingRight: '5%',
-    position: 'absolute',
-    top: '50%',
-    right: '0',
+    position: 'relative',
+    top: '-20%',
+    right: '-75%',
     transform: 'translateY(-50%)',
     '@media (max-width: 768px)': {
       position: 'relative',
