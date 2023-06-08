@@ -59,7 +59,7 @@ function About(props) {
                     className='rotate-image'
                     src='/images/about/Danny.jpg'
                     alt='profile'
-                    style={{ borderRadius: '40%', marginTop: '-120px' }}
+                    style={{position: 'relative', borderRadius: '40%', marginTop: '40px' }}
                   />
                 </Col>
               </Row>

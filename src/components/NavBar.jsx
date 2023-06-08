@@ -80,7 +80,7 @@ const NavBar = () => {
         variant='light'
         className='navbar-custom'
         expanded={expanded}
-        style={{ position: 'right', right: '-12%', top: '2%' }}
+        style={{ position: 'right', right: '-1%', top: '2%',color: 'white'  }}
       >
         <Container>
           {data?.logo && (

@@ -24,13 +24,14 @@ const styles = {
   },
   inlineChild: {
     display: 'inline-block',
-    paddingBottom: '5.5%',
+    paddingBottom: '7.5%',
     color: '#fff ',
     position: 'relative',
     top: '5%',
   },
   mainContainer: {
     // minHeight: '100vh',
+    // height: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -48,8 +49,8 @@ const styles = {
     transform: 'translateY(-50%)',
     '@media (max-width: 768px)': {
       position: 'relative',
-      top: 'auto',
-      right: 'auto',
+      // top: 'auto',
+      // right: 'auto',
       transform: 'none',
       marginTop: '20px',
       alignSelf: 'center',
