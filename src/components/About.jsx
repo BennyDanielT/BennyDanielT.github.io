@@ -18,7 +18,7 @@ const styles = {
     fontWeight: 500,
   },
   introImageContainer: {
-    marginTop: '-120px', // adjust this value to your liking
+    marginTop: '-80px', // adjust this value to your liking
     margin: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -57,9 +57,13 @@ function About(props) {
                   <img
                     id='about'
                     className='rotate-image'
-                    src='/images/about/Danny.jpg'
+                    src='/images/about/Ben_June_2023.jpg'
                     alt='profile'
-                    style={{position: 'relative', borderRadius: '40%', marginTop: '40px' }}
+                    style={{
+                      position: 'relative',
+                      borderRadius: '60%',
+                      marginTop: '40px',
+                    }}
                   />
                 </Col>
               </Row>

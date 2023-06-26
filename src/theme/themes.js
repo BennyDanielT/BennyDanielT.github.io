@@ -20,16 +20,18 @@ export const lightTheme = {
   bsSecondaryVariant: 'dark',
   socialIconBgColor: '#121212',
 };
-
+import './home.css';
 export const darkTheme = {
-  background: '#050816',
+  background: '#050e1b',
+  // background: 'linear-gradient(180deg,#264deb,#edebd7,#d0073a)',
+  backgroundSize: '180%',
   color: '#ffffff',
   accentColor: '#0d65e9',
   education_card: '#ffffff',
   chronoTheme: {
     cardBgColor: '#1B1B1B',
     cardForeColor: '#eee',
-    titleColor: 'black',
+    titleColor: 'white',
   },
   timelineLineColor: '#111',
   cardBackground: '#060606',

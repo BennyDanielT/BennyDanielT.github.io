@@ -4,6 +4,7 @@ const GlobalStyles = createGlobalStyle`
    body {
      background: ${({ theme }) => theme.background};
      color: ${({ theme }) => theme.color};
+    animation: ${({ theme }) => theme.animation};
      transition: all 0.50s linear; 
   }
 `;

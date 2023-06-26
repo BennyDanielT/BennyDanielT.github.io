@@ -8,9 +8,22 @@ import ComputersCanvas from './Computers';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 
+// function playAudio() {
+//   const audio = new Audio('/music/lofi.mp3');
+//   audio.play();
+// }
+
+let audioPlayer; // Global variable to track the audio player
+
 function playAudio() {
-  const audio = new Audio('/music/lofi.mp3');
-  audio.play();
+  if (audioPlayer) {
+    // If an audio player already exists, pause and reset it
+    audioPlayer.pause();
+    audioPlayer.currentTime = 0;
+  }
+
+  audioPlayer = new Audio('/music/Afterhours.m4a'); // Create a new audio player
+  audioPlayer.play();
 }
 
 const styles = {
@@ -95,13 +108,13 @@ function Home() {
 
   return (
     <Fade>
-      <div className='section-content-container'>
-        <div style={styles.mainContainer}>
-          {data ? (
-            <>
-              <h1 style={{ ...styles.nameStyle }}>{data.name}</h1>
+        <div className='section-content-container'>
+          <div style={styles.mainContainer}>
+            {data ? (
+              <>
+                <h1 style={{ ...styles.nameStyle }}>{data.name}</h1>
 
-              <style>{`
+                <style>{`
               @keyframes pulse {
                 0% {
                   transform: scale(1);
@@ -126,61 +139,61 @@ function Home() {
               }
             `}</style>
 
-              <div style={styles.inlineChild}>
-                <h2 style={styles.inlineChild}> </h2>
-                <Typewriter
-                  options={{
-                    loop: true,
-                    autoStart: true,
-                    strings: data?.roles,
-                  }}
-                />
-              </div>
-              <ComputersCanvas />
+                <div style={styles.inlineChild}>
+                  <h2 style={styles.inlineChild}> </h2>
+                  <Typewriter
+                    options={{
+                      loop: true,
+                      autoStart: true,
+                      strings: data?.roles,
+                    }}
+                  />
+                </div>
+                <ComputersCanvas />
 
-              <Social />
-            </>
-          ) : (
-            <FallbackSpinner />
-          )}
+                <Social />
+              </>
+            ) : (
+              <FallbackSpinner />
+            )}
 
-          <div style={styles.imageContainer}>
-            <img
-              src='/images/home/aws-certified-cloud-practitioner.png'
-              style={{
-                ...styles.badge,
-                animation: `${
-                  isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
-                }`,
-              }}
-              onLoad={handleImageLoad}
-              alt='AWS Certified Cloud Practitioner'
-            />
-            <img
-              src='/images/home/aws-certified-solutions-architect-associate.png'
-              style={{
-                ...styles.badge,
-                animation: `${
-                  isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
-                }`,
-              }}
-              onLoad={handleImageLoad}
-              alt='AWS Certified Solutions Architect Associate'
-            />
-            <img
-              src='/images/home/hashicorp-certified-terraform-associate-002.png'
-              style={{
-                ...styles.badge,
-                animation: `${
-                  isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
-                }`,
-              }}
-              onLoad={handleImageLoad}
-              alt='HashiCorp Certified Terraform Associate'
-            />
+            <div style={styles.imageContainer}>
+              <img
+                src='/images/home/aws-certified-cloud-practitioner.png'
+                style={{
+                  ...styles.badge,
+                  animation: `${
+                    isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
+                  }`,
+                }}
+                onLoad={handleImageLoad}
+                alt='AWS Certified Cloud Practitioner'
+              />
+              <img
+                src='/images/home/aws-certified-solutions-architect-associate.png'
+                style={{
+                  ...styles.badge,
+                  animation: `${
+                    isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
+                  }`,
+                }}
+                onLoad={handleImageLoad}
+                alt='AWS Certified Solutions Architect Associate'
+              />
+              <img
+                src='/images/home/hashicorp-certified-terraform-associate-002.png'
+                style={{
+                  ...styles.badge,
+                  animation: `${
+                    isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
+                  }`,
+                }}
+                onLoad={handleImageLoad}
+                alt='HashiCorp Certified Terraform Associate'
+              />
+            </div>
           </div>
         </div>
-      </div>
     </Fade>
   );
 }
