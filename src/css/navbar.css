@@ -2,14 +2,14 @@
   display: inline-flex !important;
 }
 
-.glitch {
+/* .glitch {
   font-family: Arial, sans-serif;
   font-size: 48px;
   font-weight: bold;
   color: white;
   text-shadow: -1px 0 #e74c3c, 0 1px #e74c3c, 1px 0 #e74c3c, 0 -1px #e74c3c;
   animation: glitch 1s linear infinite;
-}
+} */
 
 @keyframes glitch {
   0% {
@@ -36,4 +36,7 @@
     transform: translate(0);
     opacity: 1;
   }
+}
+.navbar.scroll {
+  background-color: black;
 }
