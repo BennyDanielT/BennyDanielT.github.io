@@ -8,7 +8,7 @@ function AppWrapper({ children }) {
     // Simulate a delay to show the splash screen
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3500);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);

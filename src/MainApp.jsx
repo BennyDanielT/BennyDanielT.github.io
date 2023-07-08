@@ -17,31 +17,34 @@ function MainApp() {
       .catch((err) => err);
   }, []);
 
+
   return (
-    <div className='MainApp'>
-      <NavBarWithRouter />
-      <main className='main'>
-        <Switch>
-          <Suspense fallback={<FallbackSpinner />}>
-            <Route exact path='/' component={Home} />
-            {data &&
-              data.sections.map((route) => {
-                const SectionComponent = React.lazy(() =>
-                  import('./components/' + route.component),
-                );
-                return (
-                  <Route
-                    key={route.headerTitle}
-                    path={route.path}
-                    component={() => (
-                      <SectionComponent header={route.headerTitle} />
-                    )}
-                  />
-                );
-              })}
-          </Suspense>
-        </Switch>
-      </main>
+    <div>
+      <div className='MainApp'>
+        <NavBarWithRouter />
+        <main className='main'>
+          <Switch>
+            <Suspense fallback={<FallbackSpinner />}>
+              <Route exact path='/' component={Home} />
+              {data &&
+                data.sections.map((route) => {
+                  const SectionComponent = React.lazy(() =>
+                    import('./components/' + route.component),
+                  );
+                  return (
+                    <Route
+                      key={route.headerTitle}
+                      path={route.path}
+                      component={() => (
+                        <SectionComponent header={route.headerTitle} />
+                      )}
+                    />
+                  );
+                })}
+            </Suspense>
+          </Switch>
+        </main>
+      </div>
     </div>
   );
 }

@@ -38,5 +38,6 @@
   }
 }
 .navbar.scroll {
-  background-color: black;
+  background-color: #0b182b;
+  padding-bottom: 5px;
 }

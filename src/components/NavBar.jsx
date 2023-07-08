@@ -73,7 +73,7 @@ const NavBar = () => {
           style={{
             position: 'right',
             right: '-1%',
-            top: '-2.5%',
+            top: '-2%',
             paddingBottom: '-50%',
             color: 'white',
           }}
@@ -89,8 +89,8 @@ const NavBar = () => {
                 style={
                   data?.logo?.height && data?.logo?.width
                     ? {
-                        height: 120,
-                        width: 150,
+                        height: 100,
+                        width: 125,
                         borderRadius: data?.logo?.borderRadius,
                       }
                     : styles.logoStyle

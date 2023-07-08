@@ -68,18 +68,37 @@ const styles = {
       marginTop: '20px',
       alignSelf: 'center',
     },
+    footer: {
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      width: '100%',
+      marginTop: '2rem', // Adjust the margin top value as needed
+    },
+  },
+
+  badgeContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    position: 'relative',
+    justifyContent: 'center',
+    marginTop: '1.5rem', // Adjust the margin bottom value as needed
+    alignSelf: 'center',
+    marginBottom: '5rem', // Adjust the margin bottom value as needed
   },
 
   badge: {
     width: '120px',
     height: '120px',
-    margin: '30px 10px',
+    // paddingRight: '1.5rem',
+    margin: '0 25px', // Adjust the margin value as needed
   },
 };
 
 function Home() {
   const [data, setData] = useState(null);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const currentYear = new Date().getFullYear();
 
   const handleImageLoad = useCallback(() => {
     setIsImageLoaded(true);
@@ -108,13 +127,13 @@ function Home() {
 
   return (
     <Fade>
-        <div className='section-content-container'>
-          <div style={styles.mainContainer}>
-            {data ? (
-              <>
-                <h1 style={{ ...styles.nameStyle }}>{data.name}</h1>
+      <div className='section-content-container'>
+        <div style={styles.mainContainer}>
+          {data ? (
+            <>
+              <h1 style={{ ...styles.nameStyle }}>{data.name}</h1>
 
-                <style>{`
+              <style>{`
               @keyframes pulse {
                 0% {
                   transform: scale(1);
@@ -139,61 +158,67 @@ function Home() {
               }
             `}</style>
 
-                <div style={styles.inlineChild}>
-                  <h2 style={styles.inlineChild}> </h2>
-                  <Typewriter
-                    options={{
-                      loop: true,
-                      autoStart: true,
-                      strings: data?.roles,
-                    }}
-                  />
-                </div>
-                <ComputersCanvas />
+              <div style={styles.inlineChild}>
+                <h2 style={styles.inlineChild}> </h2>
+                <Typewriter
+                  options={{
+                    loop: true,
+                    autoStart: true,
+                    strings: data?.roles,
+                  }}
+                />
+              </div>
+              <ComputersCanvas />
 
-                <Social />
-              </>
-            ) : (
-              <FallbackSpinner />
-            )}
+              <Social />
+            </>
+          ) : (
+            <FallbackSpinner />
+          )}
 
-            <div style={styles.imageContainer}>
-              <img
-                src='/images/home/aws-certified-cloud-practitioner.png'
-                style={{
-                  ...styles.badge,
-                  animation: `${
-                    isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
-                  }`,
-                }}
-                onLoad={handleImageLoad}
-                alt='AWS Certified Cloud Practitioner'
-              />
-              <img
-                src='/images/home/aws-certified-solutions-architect-associate.png'
-                style={{
-                  ...styles.badge,
-                  animation: `${
-                    isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
-                  }`,
-                }}
-                onLoad={handleImageLoad}
-                alt='AWS Certified Solutions Architect Associate'
-              />
-              <img
-                src='/images/home/hashicorp-certified-terraform-associate-002.png'
-                style={{
-                  ...styles.badge,
-                  animation: `${
-                    isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
-                  }`,
-                }}
-                onLoad={handleImageLoad}
-                alt='HashiCorp Certified Terraform Associate'
-              />
-            </div>
+          <div style={styles.badgeContainer}>
+            <img
+              src='/images/home/aws-certified-cloud-practitioner.png'
+              style={{
+                ...styles.badge,
+                animation: `${
+                  isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
+                }`,
+              }}
+              onLoad={handleImageLoad}
+              alt='AWS Certified Cloud Practitioner'
+            />
+            <img
+              src='/images/home/aws-certified-solutions-architect-associate.png'
+              style={{
+                ...styles.badge,
+                animation: `${
+                  isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
+                }`,
+              }}
+              onLoad={handleImageLoad}
+              alt='AWS Certified Solutions Architect Associate'
+            />
+            <img
+              src='/images/home/hashicorp-certified-terraform-associate-002.png'
+              style={{
+                ...styles.badge,
+                animation: `${
+                  isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
+                }`,
+              }}
+              onLoad={handleImageLoad}
+              alt='HashiCorp Certified Terraform Associate'
+            />
           </div>
         </div>
+        <footer className='footer' style={styles.footer}>
+          <p>
+            Music: &copy; {currentYear} The Weeknd XO, Inc., manufactured and
+            marketed by Republic Records, a division of UMG Recordings, Inc.
+          </p>
+        </footer>
+      </div>
     </Fade>
   );
 }
