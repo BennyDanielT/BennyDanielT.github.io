@@ -7,6 +7,8 @@ import endpoints from '../constants/endpoints';
 import ThemeToggler from './ThemeToggler';
 import '../css/navbar.css';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import { Link } from 'react-scroll';
+import navbarData from './navbar.json'; // Import the JSON data
 
 const styles = {
   logoStyle: {
@@ -40,18 +42,10 @@ const InternalNavLink = styled(NavLink)`
 
 const NavBar = () => {
   const theme = useContext(ThemeContext);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(navbarData);
   const [expanded, setExpanded] = useState(false);
   const navbarRef = useRef(null);
 
-  useEffect(() => {
-    fetch(endpoints.navbar, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
-  }, []);
   useScrollPosition(({ currPos }) => {
     if (currPos.y < 0) {
       navbarRef.current.classList.add('scroll');
@@ -124,17 +118,31 @@ const NavBar = () => {
                         {section.title}
                       </ExternalNavLink>
                     ) : (
-                      <InternalNavLink
+                      <Link
                         key={section.title}
+                        activeClass='active' // CSS class for the active link
+                        to={section.sectionId}
+                        spy={true} // Enable spy mode, highlights the section in the viewport
+                        smooth={true} // Enable smooth scrolling
+                        offset={-70} // Offset to account for the fixed Navbar height
+                        duration={700} // Duration of the scroll animation
                         onClick={() => setExpanded(false)}
-                        exact={index === 0}
-                        activeClassName='navbar__link--active'
                         className='navbar__link'
-                        to={section.href}
                         theme={theme}
                       >
                         {section.title}
-                      </InternalNavLink>
+                      </Link>
+                      // <InternalNavLink
+                      //   key={section.title}
+                      //   onClick={() => setExpanded(false)}
+                      //   exact={index === 0}
+                      //   activeClassName='navbar__link--active'
+                      //   className='navbar__link'
+                      //   to={section.href}
+                      //   theme={theme}
+                      // >
+                      //   {section.title}
+                      // </InternalNavLink>
                     ),
                   )}
               </Nav>
