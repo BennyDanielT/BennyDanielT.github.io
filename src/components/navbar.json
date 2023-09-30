@@ -1,0 +1,45 @@
+{
+  "logo": {
+    "source": "images/home/tech_knight_danny.png",
+    "width": "45px",
+    "borderRadius": "80%",
+    "height": "40px"
+  },
+  "sections": [
+    {
+      "title": "Home",
+      "href": "/",
+      "sectionId": "home"
+    },
+    {
+      "title": "About",
+      "href": "/about",
+      "sectionId": "about"
+    },
+    {
+      "title": "Skills",
+      "href": "/skills",
+      "sectionId": "skills"
+    },
+    {
+      "title": "Education",
+      "href": "/education",
+      "sectionId": "education"
+    },
+    {
+      "title": "Experience",
+      "href": "/experience",
+      "sectionId": "experience"
+    },
+    {
+      "title": "Projects",
+      "href": "/projects",
+      "sectionId": "projects"
+    },
+    {
+      "title": "Resume",
+      "href": "https://drive.google.com/file/d/1b77pvWaypQXAgKaFrI7WYZa_gXZ4p4o6/view?usp=share_link",
+      "type": "link"
+    }
+  ]
+}
