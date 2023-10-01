@@ -7,7 +7,7 @@ import Header from './Header';
 import endpoints from '../constants/endpoints';
 import FallbackSpinner from './FallbackSpinner';
 import '../css/about.css';
-
+import aboutSection from './JSON/about.json';
 const styles = {
   introTextContainer: {
     margin: 10,
@@ -29,18 +29,18 @@ const styles = {
 
 function About(props) {
   const { header } = props;
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(aboutSection);
 
   const parseIntro = (text) => <ReactMarkdown children={text} />;
 
-  useEffect(() => {
-    fetch(endpoints.about, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
-  }, []);
+  // useEffect(() => {
+  //   fetch(endpoints.about, {
+  //     method: 'GET',
+  //   })
+  //     .then((res) => res.json())
+  //     .then((res) => setData(res))
+  //     .catch((err) => err);
+  // }, []);
 
   return (
     <>
@@ -57,12 +57,12 @@ function About(props) {
                   <img
                     id='about'
                     className='rotate-image'
-                    src='/images/about/Ben_June_2023.jpg'
+                    src='/images/about/Ben_Cal.jpeg'
                     alt='profile'
                     style={{
                       position: 'relative',
-                      borderRadius: '60%',
-                      marginTop: '40px',
+                      borderRadius: '80%',
+                      marginTop: '10px',
                     }}
                   />
                 </Col>
