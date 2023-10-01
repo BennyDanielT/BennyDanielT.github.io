@@ -8,7 +8,7 @@ import ThemeToggler from './ThemeToggler';
 import '../css/navbar.css';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { Link } from 'react-scroll';
-import navbarData from './navbar.json'; // Import the JSON data
+import navbarData from './JSON/navbar.json'; // Import the JSON data
 
 const styles = {
   logoStyle: {
