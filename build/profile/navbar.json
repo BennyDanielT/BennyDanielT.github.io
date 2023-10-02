@@ -31,6 +31,11 @@
       "href": "/projects"
     },
     {
+      "title": "Blog",
+      "href": "/blog",
+      "type": "link"
+    },
+    {
       "title": "Resume",
       "href": "https://drive.google.com/file/d/1b77pvWaypQXAgKaFrI7WYZa_gXZ4p4o6/view?usp=share_link",
       "type": "link"

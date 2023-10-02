@@ -44,48 +44,45 @@ function Education(props) {
       <Header title={header} />
       {data ? (
         <Fade>
-          <div className='centered-container'>
-            <div style={{ width }} className='section-content-container'>
-              <Container>
-                <Chrono
-                  // hideControls
-                  // allowDynamicUpdate
-                  useReadMore={false}
-                  items={data.education}
-                  cardHeight={200}
-                  // mode={mode}
-                  slideShow
-                  slideItemDuration={2000}
-                  slideShowType='slide_in'
-                  autoPlay
-                  theme={{
-                    primary: theme.accentColor,
-                    secondary: theme.education_card,
-                    cardBgColor: theme.chronoTheme.cardBgColor,
-                    cardForeColor: theme.chronoTheme.cardForeColor,
-                    titleColor: theme.chronoTheme.titleColor,
-                  }}
-                >
-                  <div className='chrono-icons'>
-                    {data.education.map((education) =>
-                      education.icon ? (
-                      
-                          <img
-                            className='logo-img'
-                            src={education.icon.src}
-                            alt={education.icon.alt}
-                            style={{
-                              borderRadius: '50%',
-                              width: '40px', // Adjust the width as needed
-                              height: '30px', // Adjust the height as needed
-                            }}
-                          />
-                      ) : null,
-                    )}
-                  </div>
-                </Chrono>
-              </Container>
-            </div>
+          <div style={{ width }} className='section-content-container'>
+            <Container>
+              <Chrono
+                // hideControls
+                // allowDynamicUpdate
+                useReadMore={false}
+                items={data.education}
+                cardHeight={200}
+                // mode={mode}
+                slideShow
+                slideItemDuration={2000}
+                slideShowType='slide_in'
+                autoPlay
+                theme={{
+                  primary: theme.accentColor,
+                  secondary: theme.education_card,
+                  cardBgColor: theme.chronoTheme.cardBgColor,
+                  cardForeColor: theme.chronoTheme.cardForeColor,
+                  titleColor: theme.chronoTheme.titleColor,
+                }}
+              >
+                <div className='chrono-icons'>
+                  {data.education.map((education) =>
+                    education.icon ? (
+                      <img
+                        key={education.icon.src}
+                        src={education.icon.src}
+                        alt={education.icon.alt}
+                        style={{
+                          borderRadius: '50%',
+                          width: '90px',
+                          height: '90px',
+                        }}
+                      />
+                    ) : null,
+                  )}
+                </div>
+              </Chrono>
+            </Container>
           </div>
         </Fade>
       ) : (

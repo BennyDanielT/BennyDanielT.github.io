@@ -1,10 +1,10 @@
 img {
-  height: 550px;
-  width: 550px;
+  height: 500px;
+  width: 500px;
 }
 
 .rotate-image {
-  animation: slide-in 10s linear;
+  animation: slide-in 2s linear;
 }
 
 @keyframes slide-in {
@@ -17,5 +17,5 @@ img {
 }
 
 .slide-in {
-  animation: slide-in 10s ease-out;
+  animation: slide-in 1s ease-out;
 }
