@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio_app=self.webpackChunkportfolio_app||[]).push([[743],{9629:function(p,a,o){p.exports=o.p+"static/media/AWS.6358b76a26538509a936.md"}}]);
