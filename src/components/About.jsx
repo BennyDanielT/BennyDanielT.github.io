@@ -44,7 +44,7 @@ function About(props) {
 
   return (
     <>
-      <Header title='Who am I ?' />
+      <Header title='Who & What' />
       <div className='section-content-container'>
         <Container>
           {data ? (

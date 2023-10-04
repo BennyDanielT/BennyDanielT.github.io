@@ -5,13 +5,7 @@ import endpoints from '../constants/endpoints';
 import Social from './Social';
 import FallbackSpinner from './FallbackSpinner';
 import ComputersCanvas from './Computers';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
-
-// function playAudio() {
-//   const audio = new Audio('/music/lofi.mp3');
-//   audio.play();
-// }
+import homeSection from './JSON/about.json';
 
 let audioPlayer; // Global variable to track the audio player
 
@@ -32,7 +26,7 @@ const styles = {
     top: '5%',
     fontSize: '4.25em',
     paddingBottom: '2.5%',
-    color: '#59cbe8',
+
     // width: '100%',
   },
   inlineChild: {
@@ -96,7 +90,7 @@ const styles = {
 };
 
 function Home() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(homeSection);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const currentYear = new Date().getFullYear();
 
@@ -117,23 +111,24 @@ function Home() {
       }
     }
     requestAudioPermission();
-    fetch(endpoints.home, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
+    // fetch(endpoints.home, {
+    //   method: 'GET',
+    // })
+    //   .then((res) => res.json())
+    //   .then((res) => setData(res))
+    //   .catch((err) => err);
   }, []);
 
   return (
-    <Fade>
-      <div className='section-content-container'>
-        <div style={styles.mainContainer}>
-          {data ? (
-            <>
-              <h1 style={{ ...styles.nameStyle }}>{data.name}</h1>
+    <div>
+      <Fade>
+        <div className='section-content-container'>
+          <div style={styles.mainContainer}>
+            {data ? (
+              <>
+                <h1 style={{ ...styles.nameStyle }}>{data.name}</h1>
 
-              <style>{`
+                <style>{`
               @keyframes pulse {
                 0% {
                   transform: scale(1);
@@ -158,68 +153,69 @@ function Home() {
               }
             `}</style>
 
-              <div style={styles.inlineChild}>
-                <h2 style={styles.inlineChild}> </h2>
-                <Typewriter
-                  options={{
-                    loop: true,
-                    autoStart: true,
-                    strings: data?.roles,
-                  }}
-                />
-              </div>
-              <ComputersCanvas />
+                <div style={styles.inlineChild}>
+                  <h2 style={styles.inlineChild}> </h2>
+                  <Typewriter
+                    options={{
+                      loop: true,
+                      autoStart: true,
+                      strings: data?.roles,
+                    }}
+                  />
+                </div>
+                <ComputersCanvas />
 
-              <Social />
-            </>
-          ) : (
-            <FallbackSpinner />
-          )}
+                <Social />
+              </>
+            ) : (
+              <FallbackSpinner />
+            )}
 
-          <div style={styles.badgeContainer}>
-            <img
-              src='/images/home/aws-certified-cloud-practitioner.png'
-              style={{
-                ...styles.badge,
-                animation: `${
-                  isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
-                }`,
-              }}
-              onLoad={handleImageLoad}
-              alt='AWS Certified Cloud Practitioner'
-            />
-            <img
-              src='/images/home/aws-certified-solutions-architect-associate.png'
-              style={{
-                ...styles.badge,
-                animation: `${
-                  isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
-                }`,
-              }}
-              onLoad={handleImageLoad}
-              alt='AWS Certified Solutions Architect Associate'
-            />
-            <img
-              src='/images/home/hashicorp-certified-terraform-associate-002.png'
-              style={{
-                ...styles.badge,
-                animation: `${
-                  isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
-                }`,
-              }}
-              onLoad={handleImageLoad}
-              alt='HashiCorp Certified Terraform Associate'
-            />
+            <div style={styles.badgeContainer}>
+              <img
+                src='/images/home/aws-certified-cloud-practitioner.png'
+                style={{
+                  ...styles.badge,
+                  animation: `${
+                    isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
+                  }`,
+                }}
+                onLoad={handleImageLoad}
+                alt='AWS Certified Cloud Practitioner'
+              />
+              <img
+                src='/images/home/aws-certified-solutions-architect-associate.png'
+                style={{
+                  ...styles.badge,
+                  animation: `${
+                    isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
+                  }`,
+                }}
+                onLoad={handleImageLoad}
+                alt='AWS Certified Solutions Architect Associate'
+              />
+              <img
+                src='/images/home/hashicorp-certified-terraform-associate-002.png'
+                style={{
+                  ...styles.badge,
+                  animation: `${
+                    isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
+                  }`,
+                }}
+                onLoad={handleImageLoad}
+                alt='HashiCorp Certified Terraform Associate'
+              />
+            </div>
           </div>
+          <footer className='footer' style={styles.footer}>
+            <p>
+              Music: &copy; {currentYear} The Weeknd XO, Inc., manufactured and
+              marketed by Republic Records, a division of UMG Recordings, Inc.
+            </p>
+          </footer>
         </div>
-        <footer className='footer' style={styles.footer}>
-          <p>
-            Music: &copy; {currentYear} The Weeknd XO, Inc., manufactured and
-            marketed by Republic Records, a division of UMG Recordings, Inc.
-          </p>
-        </footer>
-      </div>
-    </Fade>
+      </Fade>
+    </div>
   );
 }
 

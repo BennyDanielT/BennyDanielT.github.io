@@ -21,7 +21,7 @@ const styles = {
 
 const skills_data = {
   intro:
-    'I love to learn new things and experiment with new technologies.\nThese are some of the major languages, technologies, tools and platforms I have worked with, check out my Github page for more:',
+    "Assimilate new concepts and experiment with new technologies - that's an another weekday for me.\nThese are some of the major languages, technologies, tools and platforms I have worked with, check out my Github page for more:",
   skills: [
     {
       title: 'Languages & Databases',

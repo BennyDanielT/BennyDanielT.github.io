@@ -22,5 +22,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensures it takes up the full viewport height */
+  min-height: 200vh;
+  margin-top: 10px; /* Adjust the margin value as needed */
 }

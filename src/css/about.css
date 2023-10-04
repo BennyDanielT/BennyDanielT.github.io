@@ -1,6 +1,6 @@
 img {
-  height: 550px;
-  width: 550px;
+  height: 650px;
+  width: 650px;
 }
 
 .rotate-image {
@@ -12,10 +12,10 @@ img {
     transform: translateX(-100%);
   }
   to {
-    transform: translateX(0);
+    transform: translateX(10%);
   }
 }
 
 .slide-in {
-  animation: slide-in 10s ease-out;
+  animation: slide-in 5s ease-out;
 }

@@ -1,0 +1,21 @@
+.centered-container {
+  justify-items: center;
+  margin: 50px auto 50px;
+  max-width: 1000px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.75em;
+  font-family: 'Teko', sans-serif;
+  font-style: oblique;
+  color: #000;
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #2d9da9;
+  }
+  to {
+    text-shadow: 0 0 30px #34b3c1, 0 0 10px #4dbbc7;
+  }
+}
