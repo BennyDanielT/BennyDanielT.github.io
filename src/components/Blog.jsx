@@ -18,17 +18,16 @@ const Blog = (props) => {
   return (
     <>
       <Header title={header} />
-      {/* <div className='centered-container'> */}
-      <Typewriter
-        options={{
-          loop: true,
-          autoStart: true,
-          delay: 20,
-          strings: data.about,
-          delete: false,
-        }}
-      />
-      {/* </div> */}
+      <div className='centered-container'>
+        <Typewriter
+          options={{
+            loop: true,
+            autoStart: true,
+            delay: 20,
+            strings: data.about,
+          }}
+        />
+      </div>
     </>
   );
 };
