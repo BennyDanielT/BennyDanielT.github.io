@@ -33,7 +33,7 @@ function Splash() {
         alt='Logo'
         style={{
           width: '350px',
-          animation: `${isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''}`,
+          animation: `${isImageLoaded ? 'pulse 0.75s ease-out infinite' : ''}`,
         }}
         onLoad={handleImageLoad}
       />
