@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio_app=self.webpackChunkportfolio_app||[]).push([[821],{6821:function(e){e.exports=JSON.parse('{"name":"Benny Daniel Tharigopala","roles":["A Tech Enthusiast","A Developer"]}')}}]);

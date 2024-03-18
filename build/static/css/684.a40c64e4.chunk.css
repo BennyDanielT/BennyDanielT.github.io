@@ -1,2 +1,0 @@
-.centered-container{-webkit-animation:glow 3s ease-in-out infinite;animation:glow 3s ease-in-out infinite;color:#000;font-family:Teko,sans-serif;font-size:1.75em;font-style:oblique;justify-items:center;margin:50px auto;max-width:1000px;padding-bottom:20px;padding-top:20px}@-webkit-keyframes glow{0%{text-shadow:0 0 20px #2d9da9}to{text-shadow:0 0 30px #34b3c1,0 0 10px #4dbbc7}}@keyframes glow{0%{text-shadow:0 0 20px #2d9da9}to{text-shadow:0 0 30px #34b3c1,0 0 10px #4dbbc7}}
-/*# sourceMappingURL=684.a40c64e4.chunk.css.map*/

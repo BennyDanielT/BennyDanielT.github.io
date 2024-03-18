@@ -27,7 +27,7 @@
     },
     {
       "component": "Blog",
-      "path": "/projects",
+      "path": "/blog",
       "headerTitle": "Blog"
     }
   ]
