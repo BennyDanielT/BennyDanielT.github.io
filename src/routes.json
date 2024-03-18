@@ -35,12 +35,6 @@
       "path": "/projects",
       "headerTitle": "Projects",
       "sectionId": "projects"
-    },
-    {
-      "component": "Blog",
-      "path": "/blog",
-      "headerTitle": "Blog",
-      "sectionId": "blog"
     }
   ]
 }

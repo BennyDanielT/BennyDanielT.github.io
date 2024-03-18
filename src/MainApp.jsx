@@ -27,13 +27,14 @@ const SectionWrapper = styled.div`
 
 // Define an array of background image URLs for each section
 const sectionBackgrounds = [
-  'url("https://images.pexels.com/photos/11503985/pexels-photo-11503985.jpeg")',
-  'url("images/home/m1.jpg")',
-  'url("https://images.hdqwalls.com/download/spiderman-2099-in-spider-man-across-the-spider-verse-hn-1920x1080.jpg")',
+  'url("https://images.unsplash.com/photo-1432821596592-e2c18b78144f")',
+  'url("images/home/mee.jpg")',
+  'url("https://images.unsplash.com/photo-1451187580459-43490279c0fa")',
   'url("https://images.pexels.com/photos/289737/pexels-photo-289737.jpeg")',
+  'url("images/home/miless.jpg")',
+  'url("https://images.hdqwalls.com/download/spiderman-2099-in-spider-man-across-the-spider-verse-hn-1920x1080.jpg")',
   'url("images/home/miles.jpg")',
   'url("https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg")',
-  'url("images/home/m2.jpg")',
 ];
 
 function MainApp() {

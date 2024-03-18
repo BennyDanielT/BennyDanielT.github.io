@@ -4,6 +4,7 @@
   "homepage": "https://bennydanielt.github.io/",
   "private": true,
   "dependencies": {
+    "@babel/plugin-transform-private-property-in-object": "^7.22.11",
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@react-three/drei": "8.16.5",
     "@react-three/fiber": "^7.0.26",
@@ -12,7 +13,8 @@
     "@testing-library/user-event": "^12.1.10",
     "@types/three": "^0.150.2",
     "bootstrap": "^5.1.1",
-    "i": "^0.3.7",
+    "fs-extra": "^11.1.1",
+    "gray-matter": "^4.0.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-rc.0",
@@ -24,15 +26,14 @@
     "react-reveal": "^1.2.2",
     "react-router": "^5.2.1",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.0",
     "react-scroll": "^1.8.9",
     "react-social-icons": "^5.6.1",
-    "react-tsparticles": "^2.9.3",
     "react-vertical-timeline-component": "^3.6.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "styled-components": "^5.3.1",
     "three": "^0.148.0",
-    "tsparticles": "^2.9.3",
-    "tsparticles-slim": "^2.9.3",
     "typewriter-effect": "^2.18.2",
     "use-dark-mode": "^2.3.1",
     "vertical-timeline-component-for-react": "^1.0.7",
@@ -45,9 +46,7 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "defaults"
     ]
   },
   "scripts": {

@@ -5,7 +5,7 @@ import endpoints from '../constants/endpoints';
 import Social from './Social';
 import FallbackSpinner from './FallbackSpinner';
 import ComputersCanvas from './Computers';
-import homeSection from './JSON/about.json';
+import homeSection from './JSON/home.json';
 
 let audioPlayer; // Global variable to track the audio player
 
@@ -26,6 +26,7 @@ const styles = {
     top: '5%',
     fontSize: '4.25em',
     paddingBottom: '2.5%',
+    paddingTop: '20%',
 
     // width: '100%',
   },
@@ -111,12 +112,6 @@ function Home() {
       }
     }
     requestAudioPermission();
-    // fetch(endpoints.home, {
-    //   method: 'GET',
-    // })
-    //   .then((res) => res.json())
-    //   .then((res) => setData(res))
-    //   .catch((err) => err);
   }, []);
 
   return (

@@ -1,0 +1,2 @@
+img{height:650px;width:650px}.rotate-image{-webkit-animation:slide-in 10s linear;animation:slide-in 10s linear}@-webkit-keyframes slide-in{0%{-webkit-transform:translateX(-100%);transform:translateX(-100%)}to{-webkit-transform:translateX(10%);transform:translateX(10%)}}@keyframes slide-in{0%{-webkit-transform:translateX(-100%);transform:translateX(-100%)}to{-webkit-transform:translateX(10%);transform:translateX(10%)}}.slide-in{-webkit-animation:slide-in 5s ease-out;animation:slide-in 5s ease-out}
+/*# sourceMappingURL=712.cf293b90.chunk.css.map*/
