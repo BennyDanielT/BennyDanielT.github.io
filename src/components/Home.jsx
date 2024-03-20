@@ -179,6 +179,17 @@ function Home() {
                 alt='AWS Certified Cloud Practitioner'
               />
               <img
+                src='/images/home/aws-certified-developer-associate.png'
+                style={{
+                  ...styles.badge,
+                  animation: `${
+                    isImageLoaded ? 'pulse 1.5s ease-out infinite' : ''
+                  }`,
+                }}
+                onLoad={handleImageLoad}
+                alt='AWS Certified Developer Associate'
+              />
+              <img
                 src='/images/home/aws-certified-solutions-architect-associate.png'
                 style={{
                   ...styles.badge,
