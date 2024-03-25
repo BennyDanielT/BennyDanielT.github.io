@@ -3,7 +3,7 @@ import React, { useEffect, useState, useContext, useRef } from 'react';
 import { withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import styled, { ThemeContext } from 'styled-components';
-import endpoints from '../constants/endpoints';
+// import endpoints from '../constants/endpoints';
 import ThemeToggler from './ThemeToggler';
 import '../css/navbar.css';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';

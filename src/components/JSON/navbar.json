@@ -38,8 +38,8 @@
     },
     {
       "title": "Blog",
-      "href": "/blog",
-      "sectionId": "blog"
+      "href": "https://www.maxeffortgazette.com",
+      "type": "link"
     },
     {
       "title": "Resume",
