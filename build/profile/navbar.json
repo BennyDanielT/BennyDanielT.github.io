@@ -31,6 +31,11 @@
       "href": "/projects"
     },
     {
+      "title": "Blog",
+      "href": "https://www.maxeffortgazette.com/",
+      "sectionId": "blog"
+    },
+    {
       "title": "Resume",
       "href": "https://drive.google.com/file/d/1FyNdMDaSWgf8CbRn4ioOcKj20ak28-Cs/view?usp=sharing",
       "type": "link"
